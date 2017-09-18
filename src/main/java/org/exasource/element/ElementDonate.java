@@ -26,6 +26,7 @@ public final class ElementDonate extends JavaPlugin {
         // Check if we should load
         if (!config.getBoolean("installed")) {
             console.log(Level.WARNING, "Not loading, please generate a config in the web interface");
+            getPluginLoader().disablePlugin(this);
             return;
         }
 
