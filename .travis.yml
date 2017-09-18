@@ -1,0 +1,11 @@
+language: java
+
+deploy:
+  provider: releases
+  api_key:
+    secure: MnBtm5bGA/vxrZq87WSCdAiZwhScpJ3EgDnXKAqr7lJN6QBHnV95m/Afy12Xwdi4FYr2mu2zpLzFwxxZjlWS9Iy7QnjdJfdbAdGNRU4A1fOQWrKWC8Ur9xt+Qap02teucKiYADb9ir5+75ZpPXfY8b1FMPWWv3r41qozu/GFkQlTIosj2bGFtrFM4h970p6pgxJCpHdR/CcJDRWoVHr1kvGOMKLMoHtMjLfDWq2cKnEaWxGo7P0vkH89EVrpxyl4s3Kaq6PSpUMnxj+3IRXjt6V9nmROq24XSgw62bB0G6gOUMwgXmc3JMPYBAw/zYEasrherET20+A+VjlxRVMExCPtufSPR21Pcdfn8rtuLx2tPDhlNuoG7wjcKPZaF3/kqLJhBPnU22bvUW+iS7eU/yMa/rCAjAf5e9i3Wwwdvmjb/ruBg8HA5Kj7+6z598GDvp7m5eJta6I+5WDOwbJtSRnVPkvZu7Lo3AUv8eKfFygJdOuyGqfOOxUWJJkcECq699wRi6PANGptLyHoP9Jrn6NQJe12rbruM6rrSja1oDoMMAxi2q/LNA9Ln5cvTCbDPfzKEsN9295ojZOrsEXIulImeVoixREEYm8XqHzvTztPfGyIV+2WgKpEXGptXG+K2O982OWFiK2U2IbO+vy9tIikMsEFtWcmW66IT9wObos=
+  file: target/element-donate-*.jar
+  file_glob: true
+  skip_cleanup: true
+  on:
+    repo: Exasource/Element-Plugin
