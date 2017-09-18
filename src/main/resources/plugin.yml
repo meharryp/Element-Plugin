@@ -1,0 +1,5 @@
+name: Element Donate
+version: ${project.version}
+main: org.exasource.element.ElementDonate
+prefix: Element
+description: Element donation system server plugin
