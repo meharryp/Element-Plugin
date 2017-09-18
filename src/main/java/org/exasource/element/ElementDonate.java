@@ -2,6 +2,7 @@ package org.exasource.element;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.exasource.element.commands.PingCommand;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -28,11 +29,17 @@ public final class ElementDonate extends JavaPlugin {
             return;
         }
 
+        registerCommands();
+
         console.log(Level.INFO, "Loaded successfully");
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+    }
+
+    private void registerCommands() {
+        getCommand("ping").setExecutor(new PingCommand());
     }
 }

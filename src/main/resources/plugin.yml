@@ -3,3 +3,8 @@ version: ${project.version}
 main: org.exasource.element.ElementDonate
 prefix: Element
 description: Element donation system server plugin
+
+commands:
+  ping:
+    description: Replies with pong (TEST COMMAND)
+    usage: /ping
