@@ -1,13 +1,34 @@
 package org.exasource.element;
 
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public final class ElementDonate extends JavaPlugin {
+    private final Logger console = getLogger();
+    private final FileConfiguration config = getConfig();
+
+    @Override
+    public void onLoad() {
+        // Setup default config options
+        config.addDefault("installed", false);
+
+        // Save config
+        config.options().copyDefaults(true);
+        saveConfig();
+    }
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        // Check if we should load
+        if (!config.getBoolean("installed")) {
+            console.log(Level.WARNING, "Not loading, please generate a config in the web interface");
+            return;
+        }
 
+        console.log(Level.INFO, "Loaded successfully");
     }
 
     @Override

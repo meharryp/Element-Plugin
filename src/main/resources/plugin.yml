@@ -1,4 +1,4 @@
-name: Element Donate
+name: ElementDonate
 version: ${project.version}
 main: org.exasource.element.ElementDonate
 prefix: Element
